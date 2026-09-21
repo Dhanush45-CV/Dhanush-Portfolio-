@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Mathiwanan Danushkanth - Accounting & Finance Portfolio</title>
+  <meta name="description" content="Professional portfolio and CV of Mathiwanan Danushkanth – Accounting undergraduate and Finance Intern with practical SAGE ERP and financial operations experience." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN for Standalone execution -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Space Grotesk"', '"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          screens: {
+            xs: '475px',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      touch-action: manipulation;
+    }
+    h1, h2, h3, .font-display {
+      font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+    }
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .print-modal {
+        display: block !important;
+        position: static !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+    }
+  
+    /* Motion & scroll reveal */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.7,.2,1); }
+    .reveal.show { opacity: 1; transform: translateY(0); }
+    .card-hover { transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease; }
+    .card-hover:hover { transform: translateY(-6px); border-color: rgba(45,212,191,.38); box-shadow: 0 18px 45px rgba(0,0,0,.22); }
+    .float-slow { animation: floatSlow 6s ease-in-out infinite; }
+    @keyframes floatSlow { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+    .orb { animation: orbMove 9s ease-in-out infinite; }
+    @keyframes orbMove { 0%,100% { transform: translate3d(0,0,0) scale(1); } 50% { transform: translate3d(18px,-14px,0) scale(1.06); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+</style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 antialiased selection:bg-teal-500/30 selection:text-teal-200">
+
+  <!-- Top Navigation -->
+  <header id="top-nav" class="fixed top-0 left-0 right-0 z-50 bg-[#0b0f19]/90 backdrop-blur-md border-b border-slate-800/80 py-3.5 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 via-emerald-500 to-cyan-600 flex items-center justify-center text-slate-950 font-bold font-display text-lg shadow-md shadow-teal-500/20">
+            MD
+          </div>
+          <div>
+            <span class="block font-bold text-base sm:text-lg tracking-tight text-white group-hover:text-teal-400 transition-colors">
+              Mathiwanan Danushkanth
+            </span>
+            <span class="block text-xs text-slate-400 font-medium">
+              BM (Hons) Accounting
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+          <a href="#about" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-medium">About</a>
+          <a href="#experience" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-medium">Experience</a>
+          <a href="#skills" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-medium">Skills</a>
+          <a href="#education" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-medium">Education</a>
+          <a href="#references" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-medium">References</a>
+          <a href="#projects" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-medium">Projects</a><a href="#contact" class="px-3 py-1.5 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800/60 transition-colors font-medium">Contact</a>
+        </nav>
+
+        <!-- Direct Actions -->
+        <div class="hidden sm:flex items-center gap-2">
+          <button onclick="openModal()" class="px-3.5 py-2 rounded-lg text-xs font-semibold text-teal-300 bg-teal-950/40 hover:bg-teal-900/50 border border-teal-500/40 transition-all flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span>View CV</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button onclick="toggleMobileMenu()" class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 lg:hidden border border-slate-800" aria-label="Toggle Navigation">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0b0f19] border-b border-slate-800 px-4 pt-3 pb-6 space-y-3 mt-3 shadow-2xl">
+      <div class="grid grid-cols-2 gap-2">
+        <a href="#about" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800">About</a>
+        <a href="#experience" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800">Experience</a>
+        <a href="#skills" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800">Skills</a>
+        <a href="#education" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800">Education</a>
+        <a href="#references" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800">References</a>
+        <a href="#projects" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800">Projects</a><a href="#contact" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-slate-800">Contact</a>
+      </div>
+      <div class="grid grid-cols-2 gap-2 pt-2 border-t border-slate-800">
+      </div>
+      <button onclick="toggleMobileMenu(); openModal();" class="w-full py-2.5 rounded-lg text-sm font-semibold text-teal-300 bg-teal-950/40 border border-teal-500/40 flex items-center justify-center gap-2">
+        <span>View Printable Resume</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="reveal relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/90 border border-teal-500/30 shadow-inner">
+            <span class="relative flex h-2.5 w-2.5">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+            </span>
+            <span class="text-xs font-semibold text-teal-300 uppercase tracking-wider">
+              Finance Intern &bull; Inter Fashion (Pvt) Ltd
+            </span>
+            <span class="text-slate-500 text-xs">|</span>
+            <span class="text-xs text-slate-300 font-medium">KIU University</span>
+          </div>
+
+          <div class="space-y-3">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight font-display break-words">
+              Mathiwanan <br />
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-emerald-300 to-cyan-400">
+                Danushkanth
+              </span>
+            </h1>
+            <p class="text-lg sm:text-xl font-medium text-slate-300 leading-relaxed max-w-2xl">
+              Accounting undergraduate with practical experience in <strong class="text-white font-semibold">SAGE ERP</strong>, inventory control, reconciliation, post-costing, petty cash and supplier handling.
+            </p>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-400 leading-relaxed max-w-2xl">
+            Currently pursuing <span class="text-teal-300 font-medium">BM (Hons) in Accounting</span> at KIU University while gaining practical finance experience at Inter Fashion (Pvt) Ltd.
+          </p>
+
+          <!-- Direct Communication Pills (Click to Dial & Email) -->
+          <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-2 sm:gap-3 pt-2">
+            <div class="px-3 py-2 rounded-lg bg-slate-900/60 border border-slate-800 text-xs font-medium text-slate-400 flex items-center gap-1.5">
+              <span>Colombo &bull; Battaramulla, Sri Lanka</span>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div class="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4 pt-4">
+            <button onclick="openModal()" class="w-full sm:w-auto justify-center px-6 py-3 rounded-xl font-semibold text-slate-950 bg-gradient-to-r from-teal-400 via-emerald-400 to-teal-300 hover:from-teal-300 hover:to-emerald-300 shadow-lg shadow-teal-500/20 flex items-center gap-2 text-sm transition-all">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <span>View Full Resume / CV</span>
+            </button>
+            <a href="#experience" class="w-full sm:w-auto justify-center px-6 py-3 rounded-xl font-semibold text-white bg-slate-800/90 hover:bg-slate-800 border border-slate-700/80 flex items-center gap-2 text-sm transition-all">
+              <span>Explore Experience</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Card: Verified Profile Matrix -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950/90 border border-slate-800 p-6 sm:p-8 shadow-2xl backdrop-blur-xl space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-teal-600 via-emerald-600 to-slate-800 flex items-center justify-center text-white font-extrabold text-2xl font-display shadow-lg">
+                MD
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-white tracking-tight">Mathiwanan Danushkanth</h2>
+                <p class="text-xs text-teal-400 font-medium">Inter Fashion (pvt) Ltd &bull; Finance Intern</p>
+                <p class="text-xs text-slate-400 mt-0.5">KIU University &bull; BM (Hons) Accounting</p>
+              </div>
+            </div>
+
+            <!-- Quick Matrix Highlights -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-800 space-y-1">
+                <span class="text-xs font-semibold text-teal-300 block">SAGE ERP</span>
+                <p class="text-[11px] text-slate-400 leading-tight">GL accounts, invoice booking &amp; supplier master creation</p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-800 space-y-1">
+                <span class="text-xs font-semibold text-emerald-300 block">Post-Costing</span>
+                <p class="text-[11px] text-slate-400 leading-tight">Garment reconciliation &amp; monthly production forecasting</p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-800 space-y-1">
+                <span class="text-xs font-semibold text-cyan-300 block">KIU Degree</span>
+                <p class="text-[11px] text-slate-400 leading-tight">BM (Hons) Accounting (2022 - 2026 Honors track)</p>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-800/40 border border-slate-800 space-y-1">
+                <span class="text-xs font-semibold text-amber-300 block">Inventory Audits</span>
+                <p class="text-[11px] text-slate-400 leading-tight">Weekly cycle counts, FIFO method &amp; petty cash handling</p>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <span class="text-slate-400">2 Verified Referees Available</span>
+              <a href="#references" class="text-teal-400 hover:text-teal-300 font-medium">View Contacts &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="reveal py-20 bg-slate-950/60 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display">About Mathiwanan Danushkanth</h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          A results-oriented finance practitioner combining academic rigour at KIU University with operational excellence in SAGE ERP and manufacturing garment accounting.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-5 shadow-lg">
+            <h3 class="text-xl font-bold text-white">Executive Summary</h3>
+            <div class="pl-4 border-l-2 border-teal-500 space-y-2">
+              <p class="text-slate-300 text-base italic leading-relaxed">
+                &ldquo;I’m a dedicated, hardworking, and energetic person who has developed a mature and responsible approach to any task that I undertake, or situation that I’m presented with. I’m excellent in working with others to achieve a certain objective on time and with excellence, but also on my own as I like to set myself goals which I will achieve.&rdquo;
+              </p>
+            </div>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              With hands-on experience at Inter Fashion (pvt) Ltd, responsibilities include monthly garment post-costing analysis, stock variance auditing, general ledger entries, supplier master file creations in SAGE ERP, and customer service delivery from Softlogic Glomark.
+            </p>
+          </div>
+
+          <!-- Language Capabilities -->
+          <div class="p-6 rounded-2xl bg-slate-900/70 border border-slate-800 space-y-4 shadow-lg">
+            <h3 class="text-lg font-bold text-white">Language Capabilities</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div class="p-3.5 rounded-xl bg-slate-800/40 border border-slate-800 space-y-1">
+                <span class="font-bold text-white text-base">English</span>
+                <p class="text-xs font-semibold text-teal-300">Professional Working</p>
+                <p class="text-[11px] text-slate-400">Undergraduate medium</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-800/40 border border-slate-800 space-y-1">
+                <span class="font-bold text-white text-base">Tamil</span>
+                <p class="text-xs font-semibold text-teal-300">Native Speaker</p>
+                <p class="text-[11px] text-slate-400">Mother tongue</p>
+              </div>
+              <div class="p-3.5 rounded-xl bg-slate-800/40 border border-slate-800 space-y-1">
+                <span class="font-bold text-white text-base">Sinhala</span>
+                <p class="text-xs font-semibold text-teal-300">Working Competency</p>
+                <p class="text-[11px] text-slate-400">Workplace communication</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Verified Personal Details -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-5 shadow-xl">
+            <h3 class="text-lg font-bold text-white pb-3 border-b border-slate-800">Verified Personal Details</h3>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+              <div class="flex justify-between py-1 border-b border-slate-800/60">
+                <span class="text-slate-400">Date of Birth:</span>
+                <span class="font-semibold text-white">5th April 2001</span>
+              </div>
+              <div class="flex justify-between py-1 border-b border-slate-800/60">
+                <span class="text-slate-400">Nationality:</span>
+                <span class="font-semibold text-white">Sri Lankan</span>
+              </div>
+              
+              <div class="flex justify-between py-1 border-b border-slate-800/60">
+                <span class="text-slate-400">Civil Status:</span>
+                <span class="font-semibold text-white">Single</span>
+              </div>
+              <div class="py-2 border-b border-slate-800/60 space-y-1">
+                <span class="text-slate-400 block text-xs">Present Address:</span>
+                <p class="text-white text-xs">Robert Gunawardena Mawatha, Battaramulla 10120, Colombo.</p>
+              </div>
+              <div class="py-2 space-y-1">
+                <span class="text-slate-400 block text-xs">Permanent Address:</span>
+                <p class="text-white text-xs">Diction Corner, Halgranoya, Ragala, Nuwara Eliya</p>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-800 flex flex-col gap-2.5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="reveal py-20 bg-slate-900/40 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display">Professional Work Experience</h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Corporate financial accounting, manufacturing post-costing analysis, ERP ledgers, and retail service management.
+        </p>
+      </div>
+
+      <div class="space-y-10 max-w-5xl mx-auto">
+        <!-- Role 1 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 pb-6 border-b border-slate-800">
+            <div>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-teal-500/10 text-teal-400 border border-teal-500/30">Active Role</span>
+              <h3 class="text-2xl font-bold text-white mt-2">Finance Intern</h3>
+              <p class="text-base font-semibold text-teal-400">Inter Fashion (pvt) Ltd</p>
+              <p class="text-xs text-slate-400 mt-0.5">Sri Lanka &bull; Garment &amp; Apparel Manufacturing</p>
+            </div>
+            <div class="text-xs font-medium text-slate-400 sm:text-right">
+              <span class="block text-slate-200 font-semibold">May 2025 &ndash; Present</span>
+              <span class="block text-slate-400">Current internship</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Key Accounting Responsibilities</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <span class="text-teal-400 font-bold">&bull;</span>
+                <span><strong>Monthly Garment Post-Costing:</strong> Analyzing material variance, labor hours, and overhead cost accuracy against initial budgets.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-teal-400 font-bold">&bull;</span>
+                <span><strong>General Ledger Reconciliation:</strong> Preparing and verifying balance sheet sub-ledgers, petty cash vouchers, and bank statements.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-teal-400 font-bold">&bull;</span>
+                <span><strong>SAGE ERP Operations:</strong> Managing vendor master data, booking accounts payable service invoices, and recording journal vouchers.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-teal-400 font-bold">&bull;</span>
+                <span><strong>Inventory Cycle Counts:</strong> Executing physical stock verifications across warehouse raw material storage and finished goods.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Role 2 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl space-y-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 pb-6 border-b border-slate-800">
+            <div>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 border border-slate-700">Completed Experience</span>
+              <h3 class="text-2xl font-bold text-white mt-2">Customer Service Assistant</h3>
+              <p class="text-base font-semibold text-slate-300">Softlogic Glomark</p>
+              <p class="text-xs text-slate-400 mt-0.5">Malabe, Sri Lanka &bull; Retail</p>
+            </div>
+            <div class="text-xs font-medium text-slate-400 sm:text-right">
+              <span class="block text-slate-200 font-semibold">May 2022 &ndash; Feb 2023</span>
+              <span class="block text-slate-400">Retail &amp; Customer Operations</span>
+            </div>
+          </div>
+
+          <div class="space-y-3">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400">Key Responsibilities</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-300">
+              <div class="flex items-start gap-2.5">
+                <span class="text-teal-400 font-bold">&bull;</span>
+                <span><strong>Customer Inquiries &amp; POS:</strong> Delivered customer assistance, product locating and complaint handling.</span>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <span class="text-teal-400 font-bold">&bull;</span>
+                <span><strong>FIFO Inventory Merchandising:</strong> Ensured First-In-First-Out stock rotation reducing product damage and wastage.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="reveal py-20 bg-slate-950/60 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display">Technical &amp; Functional Competencies</h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Mastery across SAGE ERP, financial statements, spreadsheet financial modeling, and web information systems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover reveal space-y-4">
+          <h3 class="text-lg font-bold text-teal-400">Accounting &amp; ERP</h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>&bull; SAGE ERP Financial Accounting</li>
+            <li>&bull; General Ledger (GL) Reconciliation</li>
+            <li>&bull; Garment Post-Costing Analysis</li>
+            <li>&bull; Inventory Audits &amp; Cycle Counting</li>
+            <li>&bull; Variance Forecasting &amp; Reporting</li>
+            <li>&bull; Accounts Payable &amp; Master Creation</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover reveal space-y-4">
+          <h3 class="text-lg font-bold text-emerald-400">Digital &amp; IT Systems</h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>&bull; MS Office Knowledge</li>
+            <li>&bull; Microsoft Word &amp; PowerPoint</li>
+            <li>&bull; Web Technologies &amp; CMS</li>
+            <li>&bull; Database &amp; Information Systems (CIS)</li>
+            <li>&bull; ERP Accounting Systems</li>
+            <li>&bull; Commercial Presentation Pitching</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover reveal space-y-4">
+          <h3 class="text-lg font-bold text-cyan-400">Professional Soft Skills</h3>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li>&bull; Numerical Accuracy &amp; Diligence</li>
+            <li>&bull; Teamwork & Communication</li>
+            <li>&bull; Time Management</li>
+            <li>&bull; Conflict Negotiation &amp; Ethics</li>
+            <li>&bull; Trilingual Communication</li>
+            <li>&bull; Accuracy & Attention to Detail</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="reveal py-20 bg-slate-900/40 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display">Academic Qualifications &amp; Diplomas</h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Degree studies at KIU University supported by vocational diplomas in web technology and computer information systems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-teal-500/30 space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-400">University Degree</span>
+          <h3 class="text-xl font-bold text-white">BM (Hons) in Accounting</h3>
+          <p class="text-sm text-teal-300 font-semibold">KIU University &bull; Battaramulla</p>
+          <p class="text-xs text-slate-400">2022 &ndash; 2026 (Active Final-Phase Undergraduate)</p>
+          <p class="text-xs text-slate-300 leading-relaxed pt-2">BM (Hons) in Accounting degree studies.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover reveal space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Professional Diploma</span>
+          <h3 class="text-xl font-bold text-white">Diploma in HTML, Hosting, WordPress</h3>
+          <p class="text-sm text-emerald-300 font-semibold">The Future Key</p>
+          <p class="text-xs text-slate-400">2024</p>
+          <p class="text-xs text-slate-300 leading-relaxed pt-2">HTML, hosting and WordPress studies.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover reveal space-y-3">
+          <span class="text-xs font-bold uppercase tracking-wider text-cyan-400">Professional Diploma</span>
+          <h3 class="text-xl font-bold text-white">Diploma in Computer Studies</h3>
+          <p class="text-sm text-cyan-300 font-semibold">Orion International Campus</p>
+          <p class="text-xs text-slate-400">2018</p>
+          <p class="text-xs text-slate-300 leading-relaxed pt-2">Computer studies and IT fundamentals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- References Section -->
+  <section id="references" class="reveal py-20 bg-slate-950/70 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display">Professional &amp; Academic References</h2>
+        <p class="text-slate-400 text-base sm:text-lg">
+          Professional and academic references listed in the CV.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Ref 1 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-6 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-300 border border-teal-500/30">Industry Supervisor</span>
+            <h3 class="text-xl font-bold text-white">Mr. S. Devakumar</h3>
+            <p class="text-sm font-semibold text-teal-400">Accountant &bull; Inter Fashion (Pvt) Ltd</p>
+            <p class="text-xs text-slate-400 italic">Direct corporate supervisor overseeing daily SAGE ERP journal entries, bank-related activities, and garment post-costing.</p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-800 text-xs text-slate-300">
+            <p><span class="text-slate-500">Phone:</span> +94 77 347 8394</p>
+            <p><span class="text-slate-500">Email:</span> deva@interfashion.com</p>
+          </div>
+        </div>
+
+        <!-- Ref 2 -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-6 flex flex-col justify-between">
+          <div class="space-y-3">
+            <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-teal-500/10 text-teal-300 border border-teal-500/30">Academic HOD</span>
+            <h3 class="text-xl font-bold text-white">Ms. Imeshika Dilrukshi</h3>
+            <p class="text-sm font-semibold text-teal-400">KIU Campus &bull; HOD</p>
+            <p class="text-xs text-slate-400 italic">Department Head and Academic Mentor assessing course projects in management accounting, financial reporting, and ethics.</p>
+          </div>
+          <div class="space-y-2 pt-4 border-t border-slate-800 text-xs text-slate-300">
+            <p><span class="text-slate-500">Phone:</span> +94 71 629 7258</p>
+            <p><span class="text-slate-500">Email:</span> imeshika@kiu.ac.lk</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects & Activities -->
+  <section id="projects" class="reveal py-20 bg-slate-950/60 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12 space-y-3">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display">Projects & Activities</h2>
+        <p class="text-slate-400">Selected activities from my academic and professional journey.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover reveal">
+          <span class="text-teal-400 text-xs font-bold">01 / LEADERSHIP</span>
+          <h3 class="text-xl font-bold text-white mt-3">D.C Challengers Sports Club</h3>
+          <p class="text-sm text-slate-400 mt-3">Treasurer, supporting club activities and financial responsibilities.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover reveal">
+          <span class="text-emerald-400 text-xs font-bold">02 / CSR</span>
+          <h3 class="text-xl font-bold text-white mt-3">KIU CSR Project</h3>
+          <p class="text-sm text-slate-400 mt-3">Participated in the KIU CSR Project with Manusath Deranain Kandy.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 card-hover reveal">
+          <span class="text-cyan-400 text-xs font-bold">03 / BUSINESS</span>
+          <h3 class="text-xl font-bold text-white mt-3">Inspire-360</h3>
+          <p class="text-sm text-slate-400 mt-3">Participated in Inspire-360 for a new business proposal in KIU.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="reveal py-20 bg-slate-900/50 border-t border-slate-800/80 reveal">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-teal-400 text-xs font-bold tracking-[0.2em] uppercase">Professional Availability</span>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight font-display mt-3">Open to New Opportunities</h2>
+      <p class="text-slate-400 text-base sm:text-lg mt-4 max-w-2xl mx-auto">
+        Interested in accounting, finance, ERP-related roles and opportunities where I can continue developing my professional experience.
+      </p>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-left">
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 card-hover">
+          <p class="text-xs text-teal-400 font-semibold">AREA</p><p class="text-white font-semibold mt-2">Accounting &amp; Finance</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 card-hover">
+          <p class="text-xs text-emerald-400 font-semibold">TOOLS</p><p class="text-white font-semibold mt-2">SAGE ERP &amp; MS Office</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 card-hover">
+          <p class="text-xs text-cyan-400 font-semibold">STATUS</p><p class="text-white font-semibold mt-2">Open to Professional Growth</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-800/80 py-10 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <p>&copy; 2025 Mathiwanan Danushkanth. Verified portfolio credentials &amp; accounting qualifications.</p>
+      <div class="flex items-center gap-4 text-teal-400">
+        <button onclick="openModal()" class="hover:underline text-emerald-400">View CV Modal</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Curriculum Vitae Modal -->
+  <div id="cv-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 md:p-6" onclick="closeModal()">
+    <div class="relative w-full max-w-4xl bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col" onclick="event.stopPropagation()">
+      <div class="no-print p-3 sm:p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between shrink-0">
+        <span class="font-bold text-sm text-white">Curriculum Vitae</span>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-950 bg-teal-400 hover:bg-teal-300">
+            Print / Save PDF
+          </button>
+          <button onclick="closeModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-white">
+            &times;
+          </button>
+        </div>
+      </div>
+
+      <!-- CV Content -->
+      <div class="overflow-y-auto p-6 sm:p-10 bg-white text-slate-900 font-sans space-y-6">
+        <div class="border-b-2 border-slate-900 pb-4">
+          <h1 class="text-3xl font-black uppercase text-slate-950 font-display">Mathiwanan Danushkanth</h1>
+          <p class="text-sm font-bold text-teal-800 uppercase">Finance &amp; Accounting Professional &bull; SAGE ERP Practitioner</p>
+          <div class="text-xs text-slate-700 mt-2 space-y-0.5">
+            <p><strong>Phone:</strong></p>
+            <p><strong>Email:</strong></p>
+            <p><strong>Address:</strong> Robert Gunawardena Mawatha, Battaramulla 10120, Colombo.</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-base font-bold uppercase text-slate-950 border-b border-slate-300 pb-1 mb-2">Professional Summary</h2>
+          <p class="text-xs text-slate-700 leading-relaxed">
+            Dedicated, hardworking finance practitioner pursuing BM (Hons) in Accounting at KIU University, currently serving as a Finance Intern at Inter Fashion (pvt) Ltd. Skilled in SAGE ERP accounting, post-costing analysis, stock variance reconciliation, general ledgers, and retail service delivery.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-base font-bold uppercase text-slate-950 border-b border-slate-300 pb-1 mb-2">Work Experience</h2>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs font-bold text-slate-900">
+                <span>Finance Intern &ndash; Inter Fashion (Pvt) Ltd</span>
+                <span>May 2025 &ndash; Present</span>
+              </div>
+              <ul class="list-disc list-inside text-xs text-slate-700 mt-1 space-y-0.5">
+                <li>Managing monthly garment post-costing, monthly garment post-costing based on monthly garment sales.</li>
+                <li>Executing General Ledger entries and inventory GL checking in SAGE ERP.</li>
+                <li>Creating vendor master data and booking accounts payable service invoices.</li>
+                <li>Performing inventory cycle counting and weekly stock counts.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs font-bold text-slate-900">
+                <span>Customer Service Assistant &ndash; Softlogic Glomark, Malabe</span>
+                <span>May 2022 &ndash; Feb 2023</span>
+              </div>
+              <ul class="list-disc list-inside text-xs text-slate-700 mt-1 space-y-0.5">
+                <li>Provided high-volume customer service, floor management, and POS transactions.</li>
+                <li>Executed FIFO stock rotation and inventory display replenishments.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-base font-bold uppercase text-slate-950 border-b border-slate-300 pb-1 mb-2">Education &amp; Qualifications</h2>
+          <div class="space-y-2 text-xs text-slate-800">
+            <div>
+              <span class="font-bold text-slate-950">BM (Hons) in Accounting</span> &bull; KIU University (2022 &ndash; 2026)
+            </div>
+            <div>
+              <span class="font-bold text-slate-950">Diploma in HTML, Hosting, WordPress (Grade A)</span> &bull; The Future Key (2020)
+            </div>
+            <div>
+              <span class="font-bold text-slate-950">Diploma in Computer Studies</span> &bull; Orion International Campus (2019)
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-base font-bold uppercase text-slate-950 border-b border-slate-300 pb-1 mb-2">Referees</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-800">
+            <div class="p-2.5 bg-slate-50 border border-slate-200 rounded">
+              <p class="font-bold text-slate-950">Mr. S. Devakumar</p>
+              <p>Accountant &bull; Inter Fashion (Pvt) Ltd</p>
+              <p>Phone:</p>
+              <p>Email:</p>
+            </div>
+            <div class="p-2.5 bg-slate-50 border border-slate-200 rounded">
+              <p class="font-bold text-slate-950">Ms. Imeshika Dilrukshi</p>
+              <p>HOD &bull; KIU Campus</p>
+              <p>Phone:</p>
+              <p>Email:</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    function openModal() {
+      document.getElementById('cv-modal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('cv-modal').classList.add('hidden');
+    }
+
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = Math.min((entry.target.dataset.delay || 0), 500);
+          entry.target.style.transitionDelay = delay + 'ms';
+          entry.target.classList.add('show');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    items.forEach((el, i) => {
+      if (!el.dataset.delay) el.dataset.delay = (i % 5) * 80;
+      observer.observe(el);
+    });
+  });
+</script>
+</body>
+</html>
